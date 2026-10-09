@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LegalSathi AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:wght@600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="logo">⚖</div>
+        <div>
+          <h1>LegalSathi AI</h1>
+          <p>Labour &amp; Corporate Law</p>
+        </div>
+      </div>
+
+      <button class="new-chat" id="newChat">+ New chat</button>
+
+      <section class="side-section">
+        <h2>Try asking</h2>
+        <ul class="examples" id="examples">
+          <li>What is the minimum number of employees for EPF to apply?</li>
+          <li>Who can file a petition before the NCLT?</li>
+          <li>What are the duties of a director under the Companies Act, 2013?</li>
+          <li>Explain retrenchment compensation under the Industrial Disputes Act.</li>
+          <li>When is gratuity payable to an employee?</li>
+        </ul>
+      </section>
+
+      <section class="side-section grow">
+        <h2>Knowledge base <span id="docCount" class="badge">…</span></h2>
+        <ul class="doc-list" id="docList"></ul>
+      </section>
+
+      <div class="status" id="status"><span class="dot"></span><span id="statusText">Connecting…</span></div>
+    </aside>
+
+    <!-- Chat -->
+    <main class="chat">
+      <header class="chat-header">
+        <button class="menu-btn" id="menuBtn" aria-label="Toggle sidebar">☰</button>
+        <div>
+          <h2>Ask a legal question</h2>
+          <p>Answers come only from the indexed documents, with page citations. If the documents don't cover it, I'll say so.</p>
+        </div>
+      </header>
+
+      <div class="messages" id="messages">
+        <div class="welcome" id="welcome">
+          <div class="welcome-icon">⚖</div>
+          <h3>Namaste! How can I help?</h3>
+          <p>Ask about Indian labour laws (wages, EPF, ESI, gratuity, industrial disputes, labour codes) or corporate law (Companies Act 2013, directors, NCLT, business law).</p>
+        </div>
+      </div>
+
+      <form class="composer" id="composer">
+        <textarea id="input" rows="1" placeholder="Type your question…" maxlength="2000"></textarea>
+        <button type="submit" id="sendBtn" aria-label="Send">➤</button>
+      </form>
+      <p class="disclaimer">Legal information only, not legal advice. Verify with the source documents.</p>
+    </main>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.1.6/purify.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+fastapi
+uvicorn[standard]
+python-dotenv
+openai
+pinecone>=7
+fastembed
+rank-bm25
+pymupdf
+pytesseract
+pillow
+ipykernel
+# System dependency: Tesseract OCR (Windows installer: https://github.com/UB-Mannheim/tesseract/wiki)
